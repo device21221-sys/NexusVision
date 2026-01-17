@@ -77,6 +77,30 @@ do
             })
         end
     })
+        Tabs.Main:AddButton({
+        Title = "Counter Blox",
+        Description = "by NexusVision team",
+        Callback = function()
+            Window:Dialog({
+                Title = "Load Script?",
+                Content = "Confirm/Cancel",
+                Buttons = {
+                    {
+                        Title = "Confirm",
+                        Callback = function()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/DeviceHB21/er-grg-eg/refs/heads/main/ctblox.lua"))()
+                        end
+                    },
+                    {
+                        Title = "Cancel",
+                        Callback = function()
+
+                        end
+                    }
+                }
+            })
+        end
+    })
 end
 
 -- Addons:
