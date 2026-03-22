@@ -3,8 +3,8 @@ local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/d
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
 local Window = Fluent:CreateWindow({
-    Title = "NexusVisionHub",
-    SubTitle = "by NexusVision Team",
+    Title = "LunarCore.xyz",
+    SubTitle = "by LunarCore Team",
     TabWidth = 200,
     Size = UDim2.fromOffset(580, 460),
     Acrylic = false, -- The blur may be detectable, setting this to false disables blur entirely
@@ -15,7 +15,6 @@ local Window = Fluent:CreateWindow({
 --Fluent provides Lucide Icons https://lucide.dev/icons/ for the tabs, icons are optional
 local Tabs = {
     Main = Window:AddTab({ Title = "Our scripts", Icon = "settings" }),
-    Other = Window:AddTab({ Title = "Other scripts", Icon = "settings" }),
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
@@ -31,7 +30,7 @@ do
 
     Tabs.Main:AddButton({
         Title = "Apocalypse Rising 2",
-        Description = "by NexusVision team",
+        Description = "by LunarCore team",
         Callback = function()
             Window:Dialog({
                 Title = "Load Script?",
@@ -54,8 +53,8 @@ do
         end
     })
         Tabs.Main:AddButton({
-        Title = "Arsenal",
-        Description = "by NexusVision team",
+        Title = "Project Delta",
+        Description = "by LunarCore team",
         Callback = function()
             Window:Dialog({
                 Title = "Load Script?",
@@ -64,7 +63,7 @@ do
                     {
                         Title = "Confirm",
                         Callback = function()
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/DeviceHB21/er-grg-eg/refs/heads/main/nxvsarsenal"))()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/DeviceHB21/er-grg-eg/refs/heads/main/pd.lua"))()
                         end
                     },
                     {
@@ -77,31 +76,7 @@ do
             })
         end
     })
-        Tabs.Main:AddButton({
-        Title = "Counter Blox",
-        Description = "by NexusVision team",
-        Callback = function()
-            Window:Dialog({
-                Title = "Load Script?",
-                Content = "Confirm/Cancel",
-                Buttons = {
-                    {
-                        Title = "Confirm",
-                        Callback = function()
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/DeviceHB21/er-grg-eg/refs/heads/main/ctblox.lua"))()
-                        end
-                    },
-                    {
-                        Title = "Cancel",
-                        Callback = function()
-
-                        end
-                    }
-                }
-            })
-        end
-    })
-end
+end  
 
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
@@ -131,7 +106,7 @@ SaveManager:BuildConfigSection(Tabs.Settings)
 Window:SelectTab(1)
 
 Fluent:Notify({
-    Title = "NexusVisionHub",
+    Title = "LunarCore.xyz",
     Content = "The script has been loaded.",
     Duration = 8
 })
